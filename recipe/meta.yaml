@@ -2,14 +2,14 @@
 
 package:
   name: graphviz
-  version: {{ version }}
+  version: {{ version }}.1
 
 source:
   url: https://www2.graphviz.org/Packages/stable/portable_source/graphviz-{{ version }}.tar.gz  # [unix]
   md5: 9f61dc85517957793c6bb24f0611eac1  # [unix]
 
 build:
-  number: 2
+  number: 1
   detect_binary_files_with_prefix: true  # [unix]
   skip: true  # [win]
 
@@ -37,6 +37,7 @@ requirements:
     - gdk-pixbuf               # [unix]
     - gtk2                     # [unix]
     - libwebp                  # [unix]
+    - librsvg                  # [linux]
   run:
     - cairo                    # [linux]
     - expat                    # [linux]
@@ -55,6 +56,7 @@ requirements:
     - gdk-pixbuf               # [unix]
     - gtk2                     # [unix]
     - libwebp                  # [unix]
+    - librsvg                  # [linux]
     - fonts-conda-ecosystem    # [unix]
 
 test:
